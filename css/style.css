@@ -876,7 +876,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-blog .blog-text .stuff li {
   list-style: none;
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 10px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-blog .blog-text .stuff li {
@@ -886,6 +886,11 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-blog .blog-text .stuff li:first-child {
   margin-left: 0;
 }
+
+.fh5co-blog .blog-text .stuff .members{
+  float: right;
+}
+
 .fh5co-blog .blog-text .stuff li:last-child {
   float: right;
 }
