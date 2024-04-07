@@ -41,6 +41,18 @@
   object-position: 50% 50%;
 }
 
+#prjOneTitleColor {
+  color: rgb(0, 129, 214);
+}
+
+#prjTwoTitleColor {
+  color: rgb(216, 79, 125);
+}
+
+#prjThreeTitleColor {
+  color: rgb(128, 84, 230);
+}
+
 .button {
   position: relative;
   display: inline;
