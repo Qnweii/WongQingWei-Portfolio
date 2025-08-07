@@ -1,3 +1,4 @@
+// Simple prevention of inspection code from public
 document.addEventListener("keydown", function(event){
 	if (event.ctrlKey){
 		event.preventDefault();
@@ -11,6 +12,35 @@ document.addEventListener("keydown", function(event){
 document.addEventListener('contextmenu', 
 	event => event.preventDefault()
 );
+
+// Carousel functionality
+let index=1;
+
+function nextSlide(x)
+{
+	showSlide(index += x);
+}
+
+function showSlide(x)
+{
+	let numSlides = document.getElementsByClassName("carousel_slide");
+
+	if (x > numSlides.length)
+	{
+		index = 1;
+	}
+	if (x < 1)
+	{
+		index = numSlides.length;
+	}
+	for (let i=0; i < numSlides.length; i++)
+	{
+		numSlides[i].style.display = "none";  // make it disappear
+	}
+	numSlides[index-1].style.display = "block";  // make it appear
+
+}
+
 
 ;(function () {
 	
