@@ -1,3 +1,32 @@
+// Check for constant screen sizes ( > threshold --> remind users ) 
+window.onresize = window.onload = function()
+{
+	var w = this.innerWidth;
+	var h = this.innerHeight;
+	let notifyScreen = document.getElementById("notify-page");
+	let notifyMsg = document.getElementById("notify-msg");
+	let notifyContainer = document.getElementById("notify-container");
+
+	if (w < 840 || h < 600 || window.screen.width < 1024)
+	{
+		notifyScreen.style.display = "none";
+		notifyMsg.style.display = "block";
+		notifyMsg.innerHTML = "<h2>Hi! Please view this portfolio on a desktop for the best experience. Thank you :)</h2>";
+
+		// Set Style
+		notifyContainer.style.minHeight = "100dvh";
+	}
+	else
+	{
+		notifyScreen.style.display = "block";
+		notifyMsg.style.display = "none";
+
+		// Re-set Style
+		notifyContainer.style.minHeight = "0";
+	}
+}
+
+
 // Simple prevention of inspection code from public
 document.addEventListener("keydown", function(event){
 	if (event.ctrlKey){
