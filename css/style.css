@@ -793,6 +793,23 @@ h1, h2, h3, h4, h5, h6, figure {
   transform: translate3d(0, 0, 0);
 }
 
+.label
+{
+  font-size: 12px;
+  font-weight: lighter;
+  position: absolute;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  width: 30%;
+  background-color: #11212d;
+  box-shadow: 1px 1px 8px 0 #ffffff;
+  border-radius: 0;
+  right: 0;
+  z-index: 9999;
+}
+
 
 #fh5co-started .fh5co-heading {
   margin-bottom: 0;
@@ -816,6 +833,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-blog {
+  position: relative;
   width: 100%;
   float: left;
   margin-bottom: 40px;
